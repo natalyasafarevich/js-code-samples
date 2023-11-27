@@ -88,14 +88,16 @@ let arr_2= [3, 4, 5, 6];
 
 function intersection(...arg) {
 
-  let newArr = [].concat(arg);
+  let newArr = [].concat(...arg);
+  console.log(newArr)
   let uniques = newArr.filter((item,i)=>newArr.indexOf(item)!== i)
   return uniques
 //  ===
 // return arr1.filter(item => arr2.includes(item));
 }
 
-intersection(arr_1,arr_2);
+let r = intersection(arr_1,arr_2);
+console.log(r)
 
 //? =====================================================================
 
