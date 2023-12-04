@@ -137,4 +137,3 @@ newClone.user ==objectM.user // true
 
 newClone = structuredClone(objectM);
 newClone.user ==objectM.user// false
-console.log(newClone)
