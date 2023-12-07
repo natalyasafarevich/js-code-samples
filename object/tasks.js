@@ -38,3 +38,92 @@ this.read =function (){
 }
 
 }
+
+
+// Преобразование массива в объект с использованием значений как ключей:
+const arr = [10, 20, 30];
+// Ожидаемый результат: { '10': 0, '20': 1, '30': 2 }
+
+function transformArr (arr){
+  return Object.fromEntries(arr.map((item, index)=>[item, index]))
+}
+
+let result = transformArr(arr);
+
+
+// Группировка элементов массива в объект по определенному критерию:
+// У вас есть массив объектов, нужно создать объект, где ключами будут 
+// определенные свойства объектов, а значениями будут массивы объектов с одинаковыми значениями свойств.
+
+const data = [
+  { id: 1, type: 'A' },
+  { id: 2, type: 'B' },
+  { id: 3, type: 'A' },
+];
+// Ожидаемый результат: { 'A': [{ id: 1, type: 'A' }, { id: 3, type: 'A' }], 'B': [{ id: 2, type: 'B' }] }
+
+function sortObj (arr){
+ 
+}
+let sort_result = sortObj(data)
+
+
+
+const obj = { a: 1, b: 2, c: 3 };
+// Ожидаемый результат: [1, 2, 3]
+Object.values(obj);
+
+
+const obj2 = { a: 1, b: 2, c: 3 };
+// Ожидаемый результат: [['a', 1], ['b', 2], ['c', 3]]
+Object.entries(obj2);
+
+
+
+// Напишите функцию, которая принимает два или 
+// более объекта в качестве аргументов и возвращает новый объект, содержащий слияние всех переданных объектов.
+const obj1 = { a: 1, b: 2 };
+const obj3 = { b: 3, c: 4 };
+// Ожидаемый результат: { a: 1, b: 3, c: 4 }
+
+function joinObj(...arg){
+return Object.assign({}, ...arg)
+}
+let ares = joinObj(obj1, obj3);
+
+
+// Напишите функцию, которая принимает объект и возвращает количество его свойств.
+const objt = { a: 1, b: 2, c: 3 };
+// Ожидаемый результат: 3
+function resultLength(obj){
+  return Object.keys(obj).length
+}
+resultLength(objt)
+
+
+// Напишите функцию, которая принимает объект и возвращает массив уникальных значений его свойств.
+const objU = { a: 1, b: 2, c: 1 };
+// Ожидаемый результат: [1, 2]
+
+function uObj(obj){
+let new_arr = []
+  for(let key in obj){
+    if(!new_arr.includes(obj[key])){
+    new_arr.push(obj[key]);
+    }
+  }
+return new_arr
+}
+uObj(objU)
+
+
+
+const mySymbol = Symbol('description');
+const objS = {
+  [mySymbol]: 'Hello!'
+};
+// Получение значения по Symbol
+// Ожидаемый результат: 'Hello!'
+objS[mySymbol]
+
+
