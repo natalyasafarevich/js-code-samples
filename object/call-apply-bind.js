@@ -34,3 +34,6 @@ newUser // Hello Yan, you are 30, my boy
 
 let newUser2 = user.info.apply({name:"Olha"},[30, 'girl']);
 newUser2 //Hello Olha, you are 30, my girl 
+
+
+
