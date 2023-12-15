@@ -232,7 +232,7 @@ countSymbols('hello')
 // Преобразование массива в объект с индексами: Создай функцию, которая принимает массив и возвращает объект,
 //  где ключами будут индексы элементов массива, а значениями — сами элементы.
 
-let arr=  [
+let awrr=  [
   { id: 1, name: 'John' },
   { id: 2, name: 'Alice' },
   { id: 1, name: 'Bob' },
@@ -247,7 +247,7 @@ return acc
 
 return t
 }
-let td = rr(arr)
+let td = rr(awrr)
 // {
 //   1: [
 //     { id: 1, name: 'John' },
@@ -260,8 +260,8 @@ let td = rr(arr)
 //     { id: 3, name: 'Sarah' }
 //   ]
 // }
-const objA = { a: 10, b: 20, c: 30 }
-const objB = { a: 3, c: 6, d: 3 }
+// const objA = { a: 10, b: 20, c: 30 }
+// const objB = { a: 3, c: 6, d: 3 }
 // Ожидаемый результат: { a: 1, b: 3, c: 4 }
 
 function joinObj(...arg){
@@ -273,7 +273,7 @@ function joinObj(...arg){
   })
 return a
 }
-let ares = joinObj(objA, objB);
+let aress = joinObj(objA, objB);
 
 
 

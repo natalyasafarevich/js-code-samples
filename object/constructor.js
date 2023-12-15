@@ -55,3 +55,4 @@ function UserHi (name){
 }
 let df = new UserHi('Masha');
 df.sayHi() //Hi Masha
+console.log(df)
